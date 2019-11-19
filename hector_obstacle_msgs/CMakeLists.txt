@@ -9,10 +9,8 @@ project(hector_obstacle_msgs)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   std_msgs
-  hector_std_msgs
   geometry_msgs
   message_generation
-  genmsg
 )
 
 ## System dependencies are found with CMake's conventions
@@ -72,7 +70,6 @@ add_service_files(
 generate_messages(
   DEPENDENCIES
   std_msgs
-  hector_std_msgs	
   geometry_msgs
 )
 
@@ -108,7 +105,7 @@ generate_messages(
 catkin_package(
 # INCLUDE_DIRS include
 #  LIBRARIES hector_supervision_ui_msgs
- CATKIN_DEPENDS message_runtime std_msgs geometry_msgs hector_std_msgs
+ CATKIN_DEPENDS message_runtime std_msgs geometry_msgs
 #  DEPENDS system_lib
 )
 
